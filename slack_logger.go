@@ -60,14 +60,13 @@ func (s *slackLogger) Fire(entry *log.Entry) error {
 	return nil
 }
 
-func Logger() *log.config.Logger {
+func Logger() *log.Logger {
 	if config.Logger == nil {
 		config.Logger = log.New()
 	}
-	logger := log.New()
 	hook := &slackLogger{
 		channel: config.Channel,
 	}
-	logger.AddHook(hook)
-	return logger
+	config.Logger.AddHook(hook)
+	return config.Logger
 }

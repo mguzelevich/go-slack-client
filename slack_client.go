@@ -7,7 +7,7 @@ import (
 )
 
 type ClientConfig struct {
-	logger *log.Logger
+	Logger *log.Logger
 
 	ApiRoot  string
 	HookRoot string
