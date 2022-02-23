@@ -10,20 +10,6 @@ import (
 	log "github.com/sirupsen/logrus"
 )
 
-/*
-POST https://hooks.slack.com/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXXXXXX
-Content-type: application/json
-{
-  "text": "Hello, world."
-  "thread_ts": "PARENT_MESSAGE_TS",
-}
-
-curl -X POST
-	--data-urlencode "payload={\"channel\": \"#$(slack_channel)\", \"username\": \"postman\", \"text\": \"$(msg)\", \"icon_emoji\": \":ghost:\"}"
-	$(slack_hook)
-
-*/
-
 func NewSlackThread(message string) (*slackThread, error) {
 	// if channel == "" {
 	// 	return nil, nil

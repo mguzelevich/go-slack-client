@@ -1,9 +1,8 @@
 package slack_logger
 
 import (
-	// "fmt"
-	"net/http"
 	log "github.com/sirupsen/logrus"
+	"net/http"
 )
 
 type ClientConfig struct {
